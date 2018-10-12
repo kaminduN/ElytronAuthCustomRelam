@@ -1,0 +1,11 @@
+/subsystem=elytron/custom-realm=MyRealm:add(module=lk.kana.elytron.custom-relam, class-name=lk.kana.elytron.custom_relam.MyRealm)
+
+#/subsystem=elytron/custom-realm=myRealm:add(module=org.wildfly.security.examples.custom-realm, 
+#											class-name=org.wildfly.security.examples.MyRealm, 
+#											configuration={myAttribute="myValue"})
+
+/subsystem=elytron/security-domain=exampleSD:list-add(name=realms, index=0, value={realm=MyRealm})
+
+/subsystem=elytron/security-domain=exampleSD:write-attribute(name=default-realm, value=MyRealm)
+
+reload

@@ -1,0 +1,3 @@
+# Add the custom filter module to the server
+
+module add --name=lk.kana.elytron.custom-relam --resources=target/ElytronAuthRelam-1.0.0-SNAPSHOT.jar --dependencies=org.wildfly.security.elytron-private,org.jboss.logging,javax.api
